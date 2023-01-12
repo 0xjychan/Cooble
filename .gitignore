@@ -23,7 +23,6 @@ creds.js
 .next/
  
 # Private Files
-*.json
 *.csv
 *.csv.gz
 *.tsv
