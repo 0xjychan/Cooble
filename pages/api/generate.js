@@ -50,7 +50,7 @@ export default async function (req, res) {
 }
 
 function generatePrompt(book) {
-  return `Provide a detailed summary of the following book. Present the content in bullet points and it must be more than 400 words.
+  return `Provide a detailed summary of the following book, preserving all the important information. Present the content in bullet points and it must have more than 400 word count.\n
 Book Title: ${book}
 Summary:`;
 }

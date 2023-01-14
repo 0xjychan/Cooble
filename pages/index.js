@@ -44,11 +44,11 @@ export default function Home() {
     <div>
       <Head>
         <title>Quickread</title>
-        <link rel="icon" href="/book.png" />
+        <link rel="icon" href="book3c.svg" />
       </Head>
 
       <main className={styles.main}>
-        <img src="/book.png" className={styles.icon} />
+        <img src="book3c.svg" className={styles.icon} />
         <h2>QuickRead</h2>
         <form onSubmit={onSubmit}>
           <input

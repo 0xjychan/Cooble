@@ -30,7 +30,7 @@
   padding-top: 60px;
 }
 .main .icon {
-  width: 80px;
+  width: 120px;
 }
 .main h2 {
   font-size: 48px;
@@ -38,6 +38,7 @@
   font-weight: bold;
   color: #202123;
   margin: 16px 0 40px;
+  font-family: 'PT Sans Caption', sans-serif;
 }
 .main form {
   display: flex;
