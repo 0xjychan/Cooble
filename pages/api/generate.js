@@ -30,7 +30,7 @@ export default async function (req, res) {
       model: "text-davinci-003",
       prompt: generatePrompt(book),
       temperature: 0.6,
-      max_tokens: 3800,
+      max_tokens: 3900,
     });
     res.status(200).json({ result: completion.data.choices[0].text });
   } catch(error) {
@@ -50,7 +50,7 @@ export default async function (req, res) {
 }
 
 function generatePrompt(book) {
-  return `Provide a detailed summary of the following book, preserving all the important information. Present the content in bullet points and it must have more than 400 word count.\n
+  return `Provide a detailed summary of the following book. Preserve all the important information, emphasize and elaborate the content of the book and be very specific. Present the content in bullet points and it must have exactly more than 500 word count. If the book does not exist, return "This book does not exist".\n
 Book Title: ${book}
 Summary:`;
 }

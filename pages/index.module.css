@@ -50,8 +50,8 @@
 .main input[type="text"] {
   padding: 12px 16px;
   border: 1px solid #8A2BE2;
-  border-radius: 16px;
-  margin-bottom: 24px;
+  border-radius: 30px;
+  margin-bottom: 16px;
   outline-color: #8A2BE2;
 }
 .main ::placeholder {
@@ -59,15 +59,17 @@
   opacity: 1;
 }
 .main input[type="submit"] {
-  padding: 12px 0;
+  padding: 10px 0;
   color: #fff;
   background-color: #8A2BE2;
   border: none;
-  border-radius: 16px;
-  width: 200px;
+  border-radius: 30px;
+  width: 120px;
   margin: auto;
   text-align: center;
   cursor: pointer;
+  box-shadow: 12px 12px 24px 0 rgba(0, 0, 0, 0.2),
+    -12px -12px 24px 0 rgba(255, 255, 255, 0.5);
 }
 
 .main input[type="submit"]:hover {
@@ -76,12 +78,13 @@
 }
 
 .main input[type="submit"]:active {
-  background-color: #4B0082;
+  box-shadow: inset 6px 6px 10px 0 rgba(0, 0, 0, 0.2),
+    inset -6px -6px 10px 0 rgba(255, 255, 255, 0.5);
 }
 
 .main .result {
   font-weight: bold;
-  margin-top: 40px;
+  margin-top: 30px;
 }
 
 .main div{
@@ -89,7 +92,24 @@
  margin-right: 3.125rem;
 }
 
-
-.main Spinner {
+.main .load {
   margin: auto;
+}
+
+.main .container {
+  background-color: #e8f4f8;
+  margin-top:30px;
+  padding-bottom: 30px;
+  border-radius: 20px;
+  box-shadow: inset 6px 6px 10px 0 rgba(0, 0, 0, 0.2),
+    inset -6px -6px 10px 0 rgba(255, 255, 255, 0.5);
+}
+
+.footer {
+  position: relative;
+  bottom: 0px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 12px
 }

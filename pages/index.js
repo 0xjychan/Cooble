@@ -1,8 +1,9 @@
 import Head from "next/head";
 import React, { useState } from "react";
 import styles from "./index.module.css";
-import Spinner from 'react-bootstrap/Spinner';
 import 'bootstrap/dist/css/bootstrap.css';
+import { Grid } from 'react-loader-spinner'
+
 
 export default function Home() {
   const [bookInput, setBookInput] = useState("");
@@ -58,12 +59,13 @@ export default function Home() {
             value={bookInput}
             onChange={(e) => setBookInput(e.target.value)}
           />
-           {isLoading ? <center><Spinner animation="border" role="status"/></center> : <input type="submit" value="Summarize" />}
+           {isLoading ? <div className={styles.load}><Grid height="80" width="80" color="#8A2BE2" ariaLabel="loading" radius="12.5" visible={true}/></div> : <input type="submit" value="Summarize" />}
         </form>
-        <div>
-        {result == null ? <div className={styles.result}>{result}</div> : <div className={styles.result}>{result.split('•').filter(text=>text !== '' && text !== '\n\n' && text !== '\n').map((str,index) => <li key={index}>{str}</li>)}</div>}
-        </div>
+        {result == null || isLoading ? <div></div> : <div className={styles.container}><div className={styles.result}>{result.split('•').filter(text=>text !== '' && text !== '\n\n' && text !== '\n' && text !== ' \n\n' && text !== ' \n').map((str,index) => <li key={index}>{str}{'\n'}</li>)}</div></div>}
+        <br></br>
+        <br></br>
       </main>
+      <div className={styles.footer}>&copy; QuickRead {new Date().getFullYear()}</div>
     </div>
   );
 }
