@@ -42,6 +42,12 @@
   margin: 16px 0 40px;
   font-family: 'PT Sans Caption', sans-serif;
 }
+
+.main h4 {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
 .main form {
   display: flex;
   flex-direction: column;

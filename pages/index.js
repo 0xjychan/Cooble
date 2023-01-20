@@ -44,13 +44,14 @@ export default function Home() {
   return (
     <div>
       <Head>
-        <title>Quickread</title>
+        <title>Cooble</title>
         <link rel="icon" href="book3c.svg" />
       </Head>
 
       <main className={styles.main}>
         <img src="book3c.svg" className={styles.icon} />
-        <h2>QuickRead</h2>
+        <h2>Cooble</h2>
+        <h4>Read a book under a minute</h4>
         <form onSubmit={onSubmit}>
           <input
             type="text"
@@ -65,7 +66,7 @@ export default function Home() {
         <br></br>
         <br></br>
       </main>
-      <div className={styles.footer}>&copy; QuickRead {new Date().getFullYear()}</div>
+      <div className={styles.footer}>&copy; Cooble {new Date().getFullYear()}</div>
     </div>
   );
 }
