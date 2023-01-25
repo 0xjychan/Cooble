@@ -50,7 +50,7 @@ export default function Home() {
 
       <main className={styles.main}>
         <img src="book3c.svg" className={styles.icon} />
-        <h2>Cooble</h2>
+        <h2 className={styles.gradientText}>Cooble</h2>
         <h4>Read a book under a minute</h4>
         <form onSubmit={onSubmit}>
           <input
